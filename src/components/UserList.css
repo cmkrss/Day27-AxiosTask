@@ -1,0 +1,76 @@
+.user-list {
+    padding: 20px;
+  }
+  
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .user-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-item h3 {
+    margin: 0 0 10px;
+  }
+  
+  .user-item p {
+    margin: 5px 0;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .edit-btn {
+    background-color: #4caf50; /* Green */
+  }
+  
+  .delete-btn {
+    background-color: #f44336; /* Red */
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+
+  
+.save-btn, .cancel-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .save-btn {
+    background-color: #4caf50; /* Green */
+  }
+  
+  .cancel-btn {
+    background-color: #f44336; /* Red */
+  }
+  
+  .save-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e53935;
+  }

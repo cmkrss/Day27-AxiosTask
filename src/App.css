@@ -4,17 +4,18 @@
   align-items: center;
   text-align: center;
   padding: 20px;
+ 
 }
 
 .user-list {
  
-  
   align-items: center; 
   justify-content: center; 
   height: 100vh; 
 }
 
 .user-form {
+ 
   margin: 20px 0;
 }
 

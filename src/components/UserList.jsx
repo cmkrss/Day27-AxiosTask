@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getUsers, deleteUser } from '../api/userApi';
 import UserForm from './UserForm';
+import './UserList.css'; // Ensure you import the CSS file
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -51,22 +52,20 @@ const UserList = () => {
         handleClose();
       }} />
       {loading ? <p>Loading...</p> : (
-        <ul>
+        <div className="user-grid">
           {users.map(user => (
-            <li key={user.id}>
-              <div>
-                <h3>{user.name}</h3>
-                <p><strong>Email:</strong> {user.email}</p>
-                <p><strong>Phone:</strong> {user.phone}</p>
-                <p><strong>Website:</strong> <a href={`https://${user.website}`} target="_blank" rel="noopener noreferrer">{user.website}</a></p>
-                <p><strong>Address:</strong> {user.address.street}, {user.address.city}</p>
-                <p><strong>Company:</strong> {user.company.name}</p>
-                <button onClick={() => handleEdit(user)}>Edit</button>
-                <button onClick={() => handleDelete(user.id)}>Delete</button>
-              </div>
-            </li>
+            <div key={user.id} className="user-item">
+              <h3>{user.name}</h3>
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Phone:</strong> {user.phone}</p>
+              <p><strong>Website:</strong> <a href={`https://${user.website}`} target="_blank" rel="noopener noreferrer">{user.website}</a></p>
+              <p><strong>Address:</strong> {user.address.street}, {user.address.city}</p>
+              <p><strong>Company:</strong> {user.company.name}</p>
+              <button className="edit-btn" onClick={() => handleEdit(user)}>Edit</button>
+              <button className="delete-btn" onClick={() => handleDelete(user.id)}>Delete</button>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
